@@ -13,15 +13,22 @@
       theme: { extend: {} },
     };
     // Dark-Mode Toggle State aus localStorage übernehmen
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
       document.documentElement.classList.add('dark');
     }
   </script>
 </head>
-<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
-
+<body
+  class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300"
+>
   <!-- Header mit Dark-Mode-Switch -->
-  <header class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur p-4 flex justify-between items-center">
+  <header
+    class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur p-4 flex justify-between items-center"
+  >
     <h1 class="text-xl font-bold">Tristan Engels</h1>
     <button id="theme-toggle" class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
       🌙/☀️
@@ -29,69 +36,103 @@
   </header>
 
   <main class="pt-20 max-w-3xl mx-auto space-y-16 px-4">
-
     <!-- Hero / Profil -->
     <section class="text-center space-y-4">
-      <img src="https://via.placeholder.com/120" alt="Profilfoto" class="mx-auto rounded-full w-32 h-32 border-4 border-indigo-500" />
+      <img
+        src="https://via.placeholder.com/120"
+        alt="Profilfoto"
+        class="mx-auto rounded-full w-32 h-32 border-4 border-indigo-500"
+      />
       <h2 class="text-3xl font-semibold">Hallo, ich bin Tristan Engels</h2>
       <p class="text-lg">IT-Security & Automatisierung als Fachinformatiker</p>
-      <a href="#resume" class="inline-block mt-2 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">Lebenslauf ansehen</a>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="space-y-4">
-      <h3 class="text-2xl font-bold border-b-2 border-indigo-600 inline-block">Skills</h3>
+      <h3 class="text-2xl font-bold border-b-2 border-indigo-600 inline-block">
+        Skills
+      </h3>
       <ul class="grid grid-cols-2 gap-4">
         <li class="bg-indigo-50 dark:bg-gray-800 p-3 rounded">SIEM (Splunk)</li>
         <li class="bg-indigo-50 dark:bg-gray-800 p-3 rounded">Threat Hunting</li>
         <li class="bg-indigo-50 dark:bg-gray-800 p-3 rounded">Incident Response</li>
         <li class="bg-indigo-50 dark:bg-gray-800 p-3 rounded">PowerShell & Python</li>
-        <li class="bg-indigo-50 dark:bg-gray-800 p-3 rounded">Ticketing</li>
-        <li class="bg-indigo-50 dark:bg-gray-800 p-3 rounded">Active Directory</li>
+        <li class="bg-indigo-50 dark:bg-gray-800 p-3 rounded">
+          Ticketing & AD-Management
+        </li>
+        <li class="bg-indigo-50 dark:bg-gray-800 p-3 rounded">
+          Linux-Härtung (CIS-Benchmarks)
+        </li>
+        <li class="bg-indigo-50 dark:bg-gray-800 p-3 rounded">
+          Vulnerability Scanning (Nessus)
+        </li>
+        <li class="bg-indigo-50 dark:bg-gray-800 p-3 rounded">
+          Patch Management & Hardening
+        </li>
+        <li class="bg-indigo-50 dark:bg-gray-800 p-3 rounded">
+          Group Policy Security
+        </li>
+        <li class="bg-indigo-50 dark:bg-gray-800 p-3 rounded">
+          Forensik-Tools (Sysmon, Velociraptor)
+        </li>
       </ul>
     </section>
 
     <!-- Werdegang -->
     <section id="experience" class="space-y-4">
-      <h3 class="text-2xl font-bold border-b-2 border-indigo-600 inline-block">Werdegang</h3>
+      <h3 class="text-2xl font-bold border-b-2 border-indigo-600 inline-block">
+        Werdegang
+      </h3>
       <ul class="space-y-2">
-         <li>
-          <time class="font-semibold">2012 – 2022</time>  
-          Schulischer Werdegang - Erweiterter Realschulabschluss
+        <li>
+          <time class="font-semibold">2012 – 2022</time>
+          Schulischer Werdegang – Erweiterter Realschulabschluss
         </li>
         <li>
-          <time class="font-semibold">2022 – 2025</time>  
-          Ausbildung Fachinformatiker fachrichtung Systemintegration bei der Universitätsmedizin Göttingen
+          <time class="font-semibold">2022 – 2025</time>
+          Ausbildung Fachinformatiker Systemintegration bei der Universitätsmedizin
+          Göttingen
         </li>
         <li>
-          <time class="font-semibold">ab 06/2025</time>  
-          Security Operation Center(80 %) & Scripting/Automatiesierung (20 %)
+          <time class="font-semibold">ab 06/2025</time>
+          Security Operation Center (80 %) & Scripting/Automatisierung (20 %)
         </li>
       </ul>
     </section>
 
     <!-- Projekte -->
     <section id="projects" class="space-y-4">
-      <h3 class="text-2xl font-bold border-b-2 border-indigo-600 inline-block">Projekte</h3>
+      <h3 class="text-2xl font-bold border-b-2 border-indigo-600 inline-block">
+        Projekte
+      </h3>
       <div class="space-y-4">
         <div class="p-4 bg-indigo-50 dark:bg-gray-800 rounded">
           <h4 class="font-semibold">2FA Einführung</h4>
-          <p>Verwaltung PrivacyIdea und Projektmanagement</p>
+          <p>Verwaltung PrivacyIdea und Projektmanagement.</p>
         </div>
         <div class="p-4 bg-indigo-50 dark:bg-gray-800 rounded">
           <h4 class="font-semibold">Automatisierungs-Skripte</h4>
-          <p>PowerShell und Python Scripte für Automatiesierung von Ausgaben im Self-Service-Portal.</p>
+          <p>
+            PowerShell und Python Scripte für Automatisierung im
+            Self-Service-Portal.
+          </p>
+        </div>
+        <div class="p-4 bg-indigo-50 dark:bg-gray-800 rounded">
+          <h4 class="font-semibold">Unternehmensweite Client-Härtung</h4>
+          <p>
+            Rollout von Stig-Benchmarks und Sicherheitspolicies auf allen
+            Endgeräten.
+          </p>
+        </div>
+        <div class="p-4 bg-indigo-50 dark:bg-gray-800 rounded">
+          <h4 class="font-semibold">Vulnerability Scanning mit Nessus</h4>
+          <p>
+            Aufbau und Betrieb eines Nessus-Scanners für regelmäßige
+            Schwachstellenanalysen.
+          </p>
         </div>
       </div>
     </section>
-
-    <!-- Lebenslauf -->
-    <section id="resume" class="text-center">
-      <a href="Dein-Lebenslauf.pdf" target="_blank" class="px-6 py-3 bg-indigo-600 text-white rounded hover:bg-indigo-700">
-        Lebenslauf herunterladen
-      </a>
-    </section>
-
   </main>
 
   <script>
@@ -99,9 +140,10 @@
     const btn = document.getElementById('theme-toggle');
     btn.addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
-      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+      localStorage.theme = document.documentElement.classList.contains('dark')
+        ? 'dark'
+        : 'light';
     });
   </script>
-
 </body>
 </html>
